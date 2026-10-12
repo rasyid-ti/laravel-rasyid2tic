@@ -8,7 +8,12 @@ use App\Http\Controllers\MahasiswaController;
 
 use App\Http\Controllers\MatakuliahController;
 
+use App\Http\Controllers\QuestionController;
+
 Route::get('/matakuliah', [MatakuliahController::class, 'index']);
+
+Route::post('question/store', [QuestionController::class, 'store'])
+		->name('question.store');
 
 Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
 
