@@ -10,6 +10,8 @@ use App\Http\Controllers\MatakuliahController;
 
 use App\Http\Controllers\QuestionController;
 
+use App\http\controllers\DashboardController;
+
 Route::get('/matakuliah', [MatakuliahController::class, 'index']);
 
 Route::post('question/store', [QuestionController::class, 'store'])
@@ -48,3 +50,6 @@ Route::get('/about', function () {
 Route::get('/mahasiswa/{param1}', [App\Http\Controllers\MahasiswaController::class, 'show']);
 
 route::get('/home', [HomeController::class, 'index']);
+
+route::get('dashboard',[DashboardController::class, 'index'])
+    ->name('dashboard');
