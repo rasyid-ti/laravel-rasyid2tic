@@ -10,7 +10,11 @@ use App\Http\Controllers\MatakuliahController;
 
 use App\Http\Controllers\QuestionController;
 
-use App\http\controllers\DashboardController;
+use App\http\Controllers\DashboardController;
+
+use App\http\Controllers\PelangganController;
+
+Route::resource('pelanggan', PelangganController::class);
 
 Route::get('/matakuliah', [MatakuliahController::class, 'index']);
 
